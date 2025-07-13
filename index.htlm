@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Para Minha Amiga 💖</title>
+  <title></title>
   <style>
     body {
       margin: 0;
@@ -164,23 +164,23 @@
   <iframe
     class="yt-hidden"
     src="https://www.youtube.com/embed/b5kYyZdL2vE?autoplay=1&loop=1&playlist=b5kYyZdL2vE&controls=0&mute=1"
-    title="Taylor Swift - Fearless"
+    title=""
     allow="autoplay"
   ></iframe>
 
   <!-- Conteúdo -->
   <div class="container">
-    <h1 class="rainbow-text">Oi, minha amiga linda! 💕</h1>
-    <p>Este site é só pra dizer o quanto <strong>eu te amo</strong> e sou grata por ter você na minha vida.</p>
+    <h1 class="rainbow-text">! 💕</h1>
+    <p>.</p>
     
     <div class="heart-container">
       <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Corações" />
     </div>
 
-    <p class="quote">"Amigas como você são raras, e eu tenho sorte de ter encontrado uma joia dessas!"</p>
+    <p class="quote">"p>
 
     <button onclick="showMessage()">Clique aqui 💌</button>
-    <div id="secret-message">Você é maravilhosa, engraçada, leal e uma das pessoas mais incríveis do universo! 🌟</div>
+    <div id="secret-message"></div>
   </div>
 
   <!-- Mostrar mensagem -->
