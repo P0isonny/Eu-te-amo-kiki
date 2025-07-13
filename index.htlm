@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Para Minha Dona 💖</title>
+  <title>Para Minha Amiga 💖</title>
   <style>
     body {
       margin: 0;
@@ -170,17 +170,17 @@
 
   <!-- Conteúdo -->
   <div class="container">
-    <h1 class="rainbow-text">Oi Kiki 💕</h1>
+    <h1 class="rainbow-text">Oi, minha amiga linda! 💕</h1>
     <p>Este site é só pra dizer o quanto <strong>eu te amo</strong> e sou grata por ter você na minha vida.</p>
     
     <div class="heart-container">
       <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Corações" />
     </div>
 
-    <p class="quote">"Eu não sei o que faria sem você, sempre vou me lembrar até dos pequenos detalhes! nunca me deixe."</p>
+    <p class="quote">"Amigas como você são raras, e eu tenho sorte de ter encontrado uma joia dessas!"</p>
 
     <button onclick="showMessage()">Clique aqui 💌</button>
-    <div id="secret-message">toda vez que acontece algo eu corro pra te mandar mensagem, toda vez que escuto Taylor me lembro de você, toda vez que vejo um vídeo de amigas eu imagino nós duas, toda vez que falam de programação ou quimica eu lembro o quão vc surta falando sobre, toda vez que escuto algo sobre Crepúsculo eu lembro de vc assistindo e comendo açaí equanto chove lá fora.</div>
+    <div id="secret-message">Você é maravilhosa, engraçada, leal e uma das pessoas mais incríveis do universo! 🌟</div>
   </div>
 
   <!-- Mostrar mensagem -->
@@ -194,6 +194,9 @@
       }
     }
   </script>
+
+</body>
+</html>
 
 </body>
 </html>
