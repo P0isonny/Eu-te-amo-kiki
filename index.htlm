@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Minha Dona 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to top right, #ffe0f0, #ffc2d1);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #5d1049;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 400px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      margin: 100px auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .heart-container img {
+      width: 100px;
+      margin: 20px auto;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      animation: pulse 2s infinite;
+    }
+
+    button:hover {
+      background-color: #ff85c1;
+      transform: scale(1.05);
+    }
+
+    #secret-message {
+      margin-top: 20px;
+      font-style: italic;
+      background: #ffe4f1;
+      padding: 15px;
+      border-radius: 15px;
+      display: none;
+      animation: typing 3s steps(40, end);
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #ff69b4;
+    }
+
+    .rainbow-text {
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      animation: rainbow 4s linear infinite;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes rainbow {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    .heart {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      color: #ff69b4;
+      animation: fall 5s linear infinite;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(120vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .sparkle {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 3s infinite ease-in-out;
+      opacity: 0.8;
+      z-index: 0;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.5); }
+    }
+
+    /* Player invisível */
+    .yt-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Corações caindo -->
+  <script>
+    const hearts = ['💖','💕','💗','💘','💞'];
+    setInterval(() => {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }, 300);
+  </script>
+
+  <!-- Estrelinhas -->
+  <script>
+    for (let i = 0; i < 40; i++) {
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+      sparkle.style.left = Math.random() * 100 + "vw";
+      sparkle.style.top = Math.random() * 100 + "vh";
+      sparkle.style.animationDelay = `${Math.random() * 3}s`;
+      document.body.appendChild(sparkle);
+    }
+  </script>
+
+  <!-- Player do YouTube (invisível) -->
+  <iframe
+    class="yt-hidden"
+    src="https://www.youtube.com/embed/b5kYyZdL2vE?autoplay=1&loop=1&playlist=b5kYyZdL2vE&controls=0&mute=0"
+    title="Taylor Swift - Fearless"
+    allow="autoplay"
+  ></iframe>
+
+  <!-- Conteúdo -->
+  <div class="container">
+    <h1 class="rainbow-text">Oi Kiki 💕</h1>
+    <p>Este site é só pra dizer o quanto <strong>eu te amo</strong> e sou grata por ter você na minha vida.</p>
+    
+    <div class="heart-container">
+      <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Corações" />
+    </div>
+
+    <p class="quote">"Eu não sei o que faria sem você, sempre vou me lembrar até dos pequenos detalhes! nunca me deixe."</p>
+
+    <button onclick="showMessage()">Clique aqui 💌</button>
+    <div id="secret-message">toda vez que acontece algo eu corro pra te mandar mensagem, toda vez que escuto Taylor me lembro de você, toda vez que vejo um vídeo de amigas eu imagino nós duas, toda vez que falam de programação ou quimica eu lembro o quão vc surta falando sobre, toda vez que escuto algo sobre Crepúsculo eu lembro de vc assistindo e comendo açaí equanto chove lá fora.</div>
+  </div>
+
+  <!-- Mostrar mensagem -->
+  <script>
+    function showMessage() {
+      const message = document.getElementById("secret-message");
+      if (message.style.display === "none" || message.style.display === "") {
+        message.style.display = "block";
+      } else {
+        message.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
+-
